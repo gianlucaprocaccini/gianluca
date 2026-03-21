@@ -113,8 +113,8 @@
     /* cursor glow */
     .cursor-glow {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: -100px;
+      left: -100px;
       width: 80px;
       height: 80px;
       border-radius: 50%;
@@ -146,8 +146,8 @@
     
     const glow = document.getElementById('cursorGlow');
 
-    let mouseX = 0, mouseY = 0;
-    let currentX = 0, currentY = 0;
+    let mouseX = -100, mouseY = -100;
+    let currentX = -100, currentY = -100;
 
     window.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
