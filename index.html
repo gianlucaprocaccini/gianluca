@@ -98,6 +98,17 @@
       animation: glowPulse 3s ease-in-out infinite, flicker 8s infinite;
     }
 
+    .subtext {
+      font-size: 16px;
+      margin-top: 15px;
+      opacity: 0.8;
+    }
+
+    .subtext a {
+      color: #00cc66;
+      text-decoration: underline;
+    }
+
     /* cursor */
     .cursor::after {
       content: "_";
@@ -133,13 +144,23 @@
       .name {
         font-size: 15px;
       }
+      .subtext {
+        font-size: 12px;
+      }
+    }
+      .name {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="cursor-glow" id="cursorGlow"></div>
   <div class="name">© <span id="year"></span> Gianluca Procaccini</div>
-  <div class="center-text cursor">big things coming soon...</div>
+  <div class="center-text">
+    <span class="cursor">big things coming soon...</span>
+    <div class="subtext">For now visit: <a href="https://gprocaccini.framer.website" target="_blank">this site</a></div>
+  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
